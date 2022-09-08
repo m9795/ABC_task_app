@@ -1,24 +1,9 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# ABC task app
+### 練習用のタスクアプリ
+復習と学習を兼ねて、書籍を参考に作成します。
+#### 実装機能
+- 一覧表示
+- 詳細表示
+- 新規登録
+- 編集
+- 削除
