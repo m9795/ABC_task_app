@@ -1,2 +1,30 @@
-h1 Tasks#show
-p Find me in app/views/tasks/show.html.slim
+h1 タスクの詳細
+
+.nav.justify-content-end
+  =link_to '一覧', tasks_path, class: 'nav-link'
+table.table.table-hover
+  tbody
+    tr
+      th= Task.human_attribute_name(:id)
+      td= @task.id
+    tr
+      th= Task.human_attribute_name(:name)
+      td= @task.name
+    tr
+      th= Task.human_attribute_name(:description)
+      td= simple_format(h(@task.description), {}, sanitize: false, warpper_tag: "div")
+      /
+        ↑複数行を改行ありで表示させている
+        1.simple_formatメソッド：エリアをpタグで囲む
+        2.sanitizeオプション：一部の危険なHTMLタグを取り除く
+        →今回はすべてのタグを安全な形で表示させるためfalseにしてhメソッドを利用
+        （hメソッド：< などHTMLにそのまま書けない文字を変換してくれるメソッド)
+        3.warpper_tagオプションを指定：
+        →simple_formatがデフォルトでpタグになるが今回はデザイン上divタグに変換
+
+    tr
+      th= Task.human_attribute_name(:created_at)
+      td= @task.created_at
+    tr
+      th= Task.human_attribute_name(:updated_at)
+      td= @task.updated_at
