@@ -65,3 +65,6 @@ gem 'html2slim'
 
 gem 'bootstrap'
 gem 'net-smtp'
+
+# URLをリンクにする(rinkuというgemもあるらしい)
+gem 'rails_autolink'

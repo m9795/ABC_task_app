@@ -12,7 +12,7 @@ table.table.table-hover
       td= @task.name
     tr
       th= Task.human_attribute_name(:description)
-      td= simple_format(h(@task.description), {}, sanitize: false, warpper_tag: "div")
+      td= auto_link(simple_format(h(@task.description), {}, sanitize: false, warpper_tag: "div"), html: { target: '_blank' })
       /
         ↑複数行を改行ありで表示させている
         1.simple_formatメソッド：エリアをpタグで囲む
@@ -21,6 +21,7 @@ table.table.table-hover
         （hメソッド：< などHTMLにそのまま書けない文字を変換してくれるメソッド)
         3.warpper_tagオプションを指定：
         →simple_formatがデフォルトでpタグになるが今回はデザイン上divタグに変換
+        4.URLをリンクで表示（別タブで開くように html: { target: '_blank' }をオプションで指定）
 
     tr
       th= Task.human_attribute_name(:created_at)
