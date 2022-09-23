@@ -73,3 +73,6 @@ gem 'net-smtp'
 
 # URLをリンクにする(rinkuというgemもあるらしい)
 gem 'rails_autolink'
+
+# 検索機能用
+gem 'ransack'
