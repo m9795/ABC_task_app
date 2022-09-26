@@ -24,6 +24,9 @@ table.table.table-hover
         4.URLをリンクで表示（別タブで開くように html: { target: '_blank' }をオプションで指定）
 
     tr
+      th= Task.human_attribute_name(:image)
+      td= image_tag @task.image if @task.image.attached?
+    tr
       th= Task.human_attribute_name(:created_at)
       td= @task.created_at
     tr
